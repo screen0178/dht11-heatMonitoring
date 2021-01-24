@@ -8,7 +8,6 @@ import pandas as pd
 
 from dash.dependencies import Input, Output
 
-from .data import instalytics_dataframe
 from .data import dataframe
 from .layout import html_layout_original
 
@@ -96,7 +95,6 @@ def graph_callbacks(app):
     )
     def update_output(n_intervals):
         df2 = dataframe()
-        print(df2)
         
         fig ={
                 'data': [{
@@ -113,7 +111,6 @@ def graph_callbacks(app):
             }
 
         data=df2.to_dict('records')
-        print(data)
 
         return fig
 
@@ -127,7 +124,6 @@ def table_callbacks(app):
     def update_output(n_intervals):
         df2 = dataframe()
         df2 = df2.sort_values(['id'], ascending=[0])
-        print(df2)
         
         fig ={
                 'data': [{
@@ -144,6 +140,5 @@ def table_callbacks(app):
             }
 
         data=df2.to_dict('records')
-        print(data)
 
         return data
