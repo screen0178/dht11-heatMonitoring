@@ -1,0 +1,6 @@
+__pycache__/config.cpython-37.pyc
+plotlyflask/__pycache__/*
+plotlyflask/plotlydash/__pycache__/*
+
+plotlyflask/plotlydash/__pycache__/
+__pycache__
